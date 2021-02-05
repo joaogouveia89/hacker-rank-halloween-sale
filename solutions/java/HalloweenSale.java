@@ -1,7 +1,27 @@
-import java.util.HashMap;
+import java.math.*;
 
 public class HalloweenSale{
-	public static int run(int p, int d, int m, int s){
-		return 7;
-	}
+	public static int howManyGames(int p, int d, int m, int s) {
+        if(s < p) return 0;
+        
+        double lastN = (((m - p)/(float)d * (-1)) + 1);
+        
+        if(lastN != Math.ceil(lastN)){
+            lastN = Math.floor(lastN);
+        }
+        
+        double an = p + (double)(lastN - 1) * (d * -1);
+        
+        double sum = ((p + an) * lastN) /(double) 2;
+        
+        double numberOfGames = 0;
+        
+        if(sum > s){
+            numberOfGames = sum / s;
+        }else{
+            numberOfGames = ((p - m) / d) + 1 + ((s - sum) / m);
+        }
+        
+        return (int)Math.floor(numberOfGames);
+    }
 }
