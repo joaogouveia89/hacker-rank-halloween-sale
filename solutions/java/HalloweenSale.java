@@ -12,7 +12,7 @@ public class HalloweenSale{
         
         double an = p + (double)(lastN - 1) * (d * -1);
         
-        double sum = ((p + an) * lastN) /(double) 2;
+        double v
         
         double numberOfGames = 0;
         
