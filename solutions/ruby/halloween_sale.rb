@@ -15,10 +15,10 @@ def halloween_sale p, d, m, s
 	sum = ((p + an) * last_n) / 2 
 
 	number_of_games = if sum > s
-					 sum / s
-					else
-						((p - m) / d) + 1 + ((s - sum) / m)
-					end
+			sum / s
+		else
+			((p - m) / d) + 1 + ((s - sum) / m)
+		end
 
 	number_of_games.floor
 end
